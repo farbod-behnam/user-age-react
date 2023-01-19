@@ -1,6 +1,7 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, Fragment, useState } from "react";
 import { Error } from "../../../models/Error.model";
 import { User } from "../../../models/User.model";
+import Wrapper from "../../Helpers/Wrapper";
 import Button from "../../UI/Button/Button";
 
 import Card from "../../UI/Card/Card";
@@ -64,7 +65,7 @@ export default function AddUser(props: Props) {
 
 
     return (
-        <div>
+        <Fragment>
             {error !== undefined && <ErrorModal title={error.title} message={error.message} onCloseErrorModal={closeErrorModalHandler}></ErrorModal>}
             <Card className={classes.form}>
                 <form onSubmit={addUserHandler}>
@@ -75,6 +76,6 @@ export default function AddUser(props: Props) {
                     <Button type="submit">Add User</Button>
                 </form>
             </Card>
-        </div>
+        </Fragment>
     );
 };
