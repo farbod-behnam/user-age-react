@@ -4,6 +4,11 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 import classes from "./ErrorModal.module.css";
 
+interface PropsErrorModal {
+    title: string;
+    message: string;
+    onCloseErrorModal: () => void;
+}
 
 interface PropsModalOverlay {
     title: string;
@@ -35,7 +40,7 @@ function ModalOverlay(props: PropsModalOverlay) {
     );
 }
 
-export default function ErrorModal(props: PropsModalOverlay) {
+export default function ErrorModal(props: PropsErrorModal) {
 
     return (
         <Fragment>
