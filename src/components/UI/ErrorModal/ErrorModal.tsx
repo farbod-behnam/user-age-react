@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, Fragment } from "react";
+import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
